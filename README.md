@@ -22,10 +22,11 @@ Clases de 7 a 9 PM y tutorías de 7 a 8 PM, hora Bogotá.
 
 | Fecha | Sesión | Income: llegas con | Outcome: te vas con | Guía |
 |---|---|---|---|---|
-| Jue 29 oct | Tutoría | Spec de tu rebanada a medias o con dudas | Spec con nota A o B y entorno listo | [Preparación de E7](estacion7/preparacion.md) |
+| Jue 29 oct | Workshop opcional · 7 a 8 PM | Tu rebanada elegida o tus dudas | Spec mínima empezada y entorno listo | [Preparación de E7](estacion7/preparacion.md) |
 | **Lun 2 nov** | **E7 · Del backlog al merge** | Spec A o B y plan de 3 a 6 tareas | La primera tarea de tu rebanada mergeada | [Estación 7](estacion7/README.md) |
 | Mié 4 nov | E8 · Calidad | Tu rebanada corriendo en local | Un flujo E2E y un test de API sobre tu rebanada | [Estación 8](estacion8/README.md) |
 | Jue 5 nov | Tutoría | Tareas pendientes | La segunda tarea mergeada | |
+| Sáb 7 nov | Laboratorio abierto opcional · 9 AM a 12 M | Lo que tengas atrasado | Al día con tests y segunda tarea antes del despliegue | |
 | Lun 9 nov | E9 · Despliegue | Tu rebanada con tests | Tu rebanada corriendo fuera de tu máquina | [Estación 9](estacion9/README.md) |
 | Mié 11 nov | E10 · Seguridad | Tu rebanada desplegada | Secretos y dependencias revisados; flujo completo | [Estación 10](estacion10/README.md) |
 | Jue 12 nov | Tutoría | Pendientes de seguridad o del flujo | Flujo completo funcionando | |
@@ -34,6 +35,8 @@ Clases de 7 a 9 PM y tutorías de 7 a 8 PM, hora Bogotá.
 | **Mié 18 nov** | **Demo Day** | Tu rebanada funcionando | Pitch en vivo ante founders de 30X | [Demo Day](demo-day/README.md) |
 
 El outcome de cada sesión es el income de la siguiente. Si una queda a medias, la tutoría siguiente es para ponerte al día.
+
+Las sesiones **opcionales** no traen contenido nuevo: son tiempo de trabajo sobre tu rebanada con el instructor disponible para resolver bloqueos.
 
 ## Cómo trabajamos desde ahora
 

@@ -1,6 +1,6 @@
 # Antes de la estación 7: tu rebanada lista
 
-**Clase:** lunes 2 de noviembre, 7 PM Bogotá. **Tiempo estimado:** de 2 a 3 horas durante el fin de semana. **Ayuda:** tutoría del jueves 29 de octubre y el grupo de la cohorte.
+**Clase:** lunes 2 de noviembre, 7 PM Bogotá. **Tiempo estimado:** de 2 a 3 horas durante el fin de semana. **Ayuda:** workshop opcional del jueves 29 de octubre (7 a 8 PM) y el grupo de la cohorte.
 
 El lunes vamos a implementar y mergear en clase la primera tarea de tu producto. Para eso necesitas llegar con una rebanada definida, evaluada y planificada.
 
@@ -36,7 +36,7 @@ Corrige los vacíos y vuelve a evaluar hasta llegar a **A o B**.
 - **Git:** `git status` funciona dentro del repo.
 - **Linear:** puedes entrar al espacio del curso y crear una tarea. No hace falta configurar API ni MCP.
 
-Si después de 10 minutos un paso de instalación sigue fallando, anota el sistema operativo, el comando y el error exacto, y llévalo a la tutoría del jueves o al grupo.
+Si después de 10 minutos un paso de instalación sigue fallando, anota el sistema operativo, el comando y el error exacto, y llévalo al workshop del jueves o al grupo.
 
 ## 5. Genera el plan (30 minutos)
 
