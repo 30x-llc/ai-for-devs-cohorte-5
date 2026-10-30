@@ -55,6 +55,7 @@ Las sesiones **opcionales** no traen contenido nuevo: son tiempo de trabajo sobr
 | [`plantillas/design.md`](plantillas/design.md) | Dejar escrito cómo se ve y cómo se construye tu producto |
 | [`estacion7/laboratorio.md`](estacion7/laboratorio.md) | Los prompts para implementar una tarea y abrir el PR |
 | [`recursos/meta-arnes.pdf`](recursos/meta-arnes.pdf) | Qué es un meta-arnés y en qué se diferencia de un orquestador, en 3 minutos |
+| [`recursos/principio-piramide.pdf`](recursos/principio-piramide.pdf) | Cómo ordenar lo que escribes: specs, PRs, prompts y el pitch del Demo Day |
 
 Para usar una skill, abre Claude Code en **tu** repo y pídele que lea y siga el `SKILL.md` correspondiente (puedes pasarle el enlace de este repo).
 
