@@ -26,17 +26,16 @@ Clases de 7 a 9 PM y tutorías de 7 a 8 PM, hora Bogotá.
 | **Lun 2 nov** | **E7 · Del backlog al merge** | Spec A o B y plan de 3 a 6 tareas | La primera tarea de tu rebanada mergeada | [Estación 7](estacion7/README.md) |
 | Mié 4 nov | E8 · Calidad | Tu rebanada corriendo en local | Un flujo E2E y un test de API sobre tu rebanada | [Estación 8](estacion8/README.md) |
 | Jue 5 nov | Tutoría | Tareas pendientes | La segunda tarea mergeada | |
-| Sáb 7 nov | Laboratorio abierto opcional · 9 AM a 12 M | Lo que tengas atrasado | Al día con tests y segunda tarea antes del despliegue | |
+| Sáb 7 nov | Workshop opcional · 9 AM a 12 M | Lo que tengas atrasado y una idea de tu pitch | Al día con tests y segunda tarea; pitch armado con el principio de la pirámide | [Principio de la pirámide](recursos/principio-piramide.pdf) |
 | Lun 9 nov | E9 · Despliegue | Tu rebanada con tests | Tu rebanada corriendo fuera de tu máquina | [Estación 9](estacion9/README.md) |
 | Mié 11 nov | E10 · Seguridad | Tu rebanada desplegada | Secretos y dependencias revisados; flujo completo | [Estación 10](estacion10/README.md) |
 | Jue 12 nov | Tutoría | Pendientes de seguridad o del flujo | Flujo completo funcionando | |
 | Lun 16 nov | E11 · Observabilidad y pitch | Tu rebanada desplegada y revisada | Un dashboard y el video de 3 minutos | [Estación 11](estacion11/README.md) |
-| Mar 17 nov | Tutoría · Ensayo | Video y demo | Demo ensayada | [Demo Day](demo-day/README.md) |
 | **Mié 18 nov** | **Demo Day** | Tu rebanada funcionando | Pitch en vivo ante founders de 30X | [Demo Day](demo-day/README.md) |
 
 El outcome de cada sesión es el income de la siguiente. Si una queda a medias, la tutoría siguiente es para ponerte al día.
 
-Las sesiones **opcionales** no traen contenido nuevo: son tiempo de trabajo sobre tu rebanada con el instructor disponible para resolver bloqueos.
+Las sesiones **opcionales** son tiempo de trabajo sobre tu rebanada con el instructor disponible para resolver bloqueos. Como no habrá sesión de preparación del Demo Day, el workshop del sábado 7 incluye armar el pitch.
 
 ## Cómo trabajamos desde ahora
 

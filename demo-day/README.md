@@ -11,7 +11,8 @@ Tu rebanada funcionando en vivo: un usuario recorre el flujo de principio a fin.
 | Cuándo | Qué |
 |---|---|
 | Lun 16 nov (E11) | Video de 3 minutos de tu rebanada |
-| Mar 17 nov (tutoría) | Demo y pitch ensayados |
+| Sáb 7 nov (workshop) | Pitch armado con el [principio de la pirámide](../recursos/principio-piramide.pdf) |
+| Antes del 18 nov | Demo y pitch ensayados por tu cuenta |
 | Mié 18 nov | Pitch en vivo |
 
 ## Checklist del día
