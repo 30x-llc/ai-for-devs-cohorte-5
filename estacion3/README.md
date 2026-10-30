@@ -14,7 +14,7 @@ Un entorno agéntico funcionando en tu repo: el agente lee tu proyecto, edita, c
 ## Cómo usarlo en la cohorte 5
 
 - Empieza por **Conceptos base** y después elige **una** herramienta. Claude Code es la que usamos en clase.
-- Las prácticas usan un CRM de ejemplo ([hardcore-ai/basic_crm_30x](https://github.com/hardcore-ai/basic_crm_30x)). Sirve para probar sin riesgo; cuando entiendas la técnica, aplícala en **tu** repo.
+- Las prácticas usan un CRM de ejemplo ([30x-llc/basic_crm_30x](https://github.com/30x-llc/basic_crm_30x)). Sirve para probar sin riesgo; cuando entiendas la técnica, aplícala en **tu** repo.
 - Si estás al día con E7, usa este material como referencia puntual: hooks, subagentes, MCP o skills cuando los necesites.
 
 ## Recorridos

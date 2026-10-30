@@ -68,13 +68,13 @@ Visita [antigravity.google/download](https://antigravity.google/download) para d
 
 | Plataforma | Requisito Mínimo |
 |---|---|
-| **macOS** | Versión 12 (Monterey) o posterior. **Solo Apple Silicon** (ARM). x86 no soportado. |
-| **Windows** | Windows 10 (64 bit) o posterior |
-| **Linux** | glibc ≥ 2.28, glibcxx ≥ 3.4.25 (Ubuntu 20+, Debian 10+, Fedora 36+, RHEL 8+) |
+| **macOS** | Versión 12 (Monterey) o posterior, Apple Silicon o Intel de 64 bits |
+| **Windows** | Windows 10 (64 bits) o Windows 11, x64 o ARM64 |
+| **Linux** | glibc ≥ 2.28, glibcxx ≥ 3.4.25 (Ubuntu 20+, Debian 10+, Fedora 36+, RHEL 8+), x64 o ARM64 |
 
 ### Autenticación
 
-Antigravity requiere una **cuenta personal de Google** (@gmail.com). Las cuentas de Workspace pueden tener restricciones según la organización.
+Antigravity funciona con una **cuenta personal de Google** (planes Free, Pro y Ultra) o con credenciales de **Gemini Enterprise**. Las cuentas de Workspace pueden tener restricciones según la organización.
 
 > **Requisitos de Autenticación**
 >

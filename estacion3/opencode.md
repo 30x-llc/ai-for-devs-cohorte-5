@@ -27,7 +27,7 @@ _Duración: 8 minutos_
 ### Instalación Rápida
 
 ```bash
-# Instalación recomendada con npm
+# Instalación con npm (o con: curl -fsSL https://opencode.ai/install | bash)
 npm install -g opencode-ai
 
 # Abrir OpenCode en el proyecto actual
@@ -36,6 +36,10 @@ opencode
 # Ver opciones disponibles
 opencode --help
 ```
+
+> **Versión**
+>
+> Estas lecciones siguen OpenCode 1, que es lo que instalan `npm`, el script `curl` y `brew install anomalyco/tap/opencode`. La fórmula de Homebrew `brew install opencode` instala OpenCode 2, que puede diferir de lo que ves aquí.
 
 ### Superficies de Uso
 
@@ -66,11 +70,7 @@ _Duración: 7 minutos_
 
 ### Configuración de Proveedor
 
-OpenCode usa un archivo `opencode.json` para declarar configuración del proyecto. En esta clase lo usaremos para fijar proveedor, modelo y herramientas compartidas.
-
-`opencode.json`
-
-```json
+OpenCode usa un archivo `opencode.json`para declarar configuración del proyecto. En esta clase lo usaremos para fijar proveedor, modelo y herramientas compartidas. `opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "openai/gpt-oss-120b",
@@ -84,9 +84,7 @@ OpenCode usa un archivo `opencode.json` para declarar configuración del proyect
 
 ### Ejemplo con Modelo Local
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "ollama/qwen2.5-coder:14b",
@@ -118,11 +116,7 @@ _Duración: 7 minutos_
 - Guiar al agente con contexto estable
 - Practicar prompts orientados a artifacts
 
-`AGENTS.md` funciona como memoria de proyecto: convenciones, comandos, rutas críticas, criterios de calidad y estilo de respuesta. En OpenCode lo usamos antes de MCP y Skills para que el agente tenga un contrato claro.
-
-`AGENTS.md`
-
-```markdown
+`AGENTS.md`funciona como memoria de proyecto: convenciones, comandos, rutas críticas, criterios de calidad y estilo de respuesta. En OpenCode lo usamos antes de MCP y Skills para que el agente tenga un contrato claro. `AGENTS.md` ```markdown
 # Reglas del proyecto
 
 ## Comandos
@@ -175,11 +169,7 @@ _Duración: 18 minutos_
 
 ### Ejemplo completo: MCP local y remoto
 
-Este ejemplo combina servidores MCP remotos y locales. La idea es copiarlo y llevarlo al archivo `opencode.json`, reemplazando los tokens de ejemplo por credenciales reales cuando aplique.
-
-`opencode.json`
-
-```json
+Este ejemplo combina servidores MCP remotos y locales. La idea es copiarlo y llevarlo al archivo `opencode.json`, reemplazando los tokens de ejemplo por credenciales reales cuando aplique. `opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -245,9 +235,7 @@ opencode mcp logout sentry
 
 Los MCPs agregan herramientas al contexto. En repos grandes conviene declararlos, pero deshabilitarlos globalmente y activarlos solo en agentes especializados.
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -318,9 +306,7 @@ Usa Sentry para encontrar los errores abiertos más recientes del proyecto, agr�
 
 #### 1. Context7 remoto
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -341,9 +327,7 @@ npx ctx7 setup --opencode
 
 #### 3. GitHub remoto
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -358,9 +342,7 @@ npx ctx7 setup --opencode
 
 #### 4. PostgreSQL / Neon
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -380,9 +362,7 @@ npx ctx7 setup --opencode
 
 #### 5. Sentry remoto con OAuth
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -394,17 +374,13 @@ npx ctx7 setup --opencode
     }
   }
 }
-```
-
-```bash
+``` ```bash
 opencode mcp auth sentry
 ```
 
 #### 6. Grep by Vercel
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -419,9 +395,7 @@ opencode mcp auth sentry
 
 #### 7. Sequential Thinking local
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
@@ -469,22 +443,14 @@ Las Skills de OpenCode siguen el estándar abierto de [Agent Skills](https://age
 
 ### Estructura oficial de una Skill
 
-OpenCode reconoce frontmatter YAML con `name` y `description` como campos requeridos. El nombre debe coincidir con la carpeta, estar en minúsculas y usar guiones simples.
-
-`estructura`
-
-```text
+OpenCode reconoce frontmatter YAML con `name` y `description`como campos requeridos. El nombre debe coincidir con la carpeta, estar en minúsculas y usar guiones simples. `estructura` ```text
 my-skill/
 ├── SKILL.md       # requerido: metadata + instrucciones
 ├── scripts/       # opcional: comandos o utilidades ejecutables
 ├── references/    # opcional: documentación, guías, specs
 ├── assets/        # opcional: plantillas, ejemplos, recursos
 └── ...            # opcional: archivos adicionales del workflow
-```
-
-`.opencode/skills/review-pr/SKILL.md`
-
-```markdown
+``` `.opencode/skills/review-pr/SKILL.md` ```markdown
 ---
 name: review-pr
 description: Revisa un PR y reporta riesgos, regresiones y faltantes de test.
@@ -508,9 +474,7 @@ Revisa el PR indicado por el usuario.
 
 ### Permisos por agente
 
-`opencode.json`
-
-```json
+`opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "agent": {
@@ -528,11 +492,7 @@ Revisa el PR indicado por el usuario.
 
 ### Instalar Skills útiles en OpenCode
 
-Reinicia OpenCode después de instalar skills: el catálogo se carga al iniciar la sesión. Luego verifica con `list installed skills` o pidiendo explícitamente usar la herramienta `skill`.
-
-`frontend-design`
-
-```bash
+Reinicia OpenCode después de instalar skills: el catálogo se carga al iniciar la sesión. Luego verifica con `list installed skills` o pidiendo explícitamente usar la herramienta `skill`. `frontend-design` ```bash
 # Buscar skills disponibles por palabra clave
 npx skills search frontend
 npx skills search design
@@ -544,11 +504,7 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 opencode
 # Prompt: list installed skills
 # Prompt: usa la skill frontend-design para revisar esta interfaz
-```
-
-`opencode.json`
-
-```json
+``` `opencode.json` ```json
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [

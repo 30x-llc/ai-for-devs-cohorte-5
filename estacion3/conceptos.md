@@ -147,25 +147,24 @@ _Duración: 2 minutos_
 | Requisito | Detalle |
 |---|---|
 | **Terminal** | macOS Terminal, Linux, o WSL2 en Windows |
-| **Node.js** | Versión 20+ (recomendado) |
+| **Node.js** | Versión 22 LTS o superior (el CRM usa Next.js 16 y Prisma 7) |
 | **Git** | Para control de versiones |
 | **VS Code** | Editor de código (o Cursor) |
-| **Claude Code CLI** | Se instala durante la clase |
+| **Claude Code** | Se instala con el comando de la lección 1 de Claude Code |
 
 ### Cuentas y Accesos
 
-- Cuenta Claude ([Pro, Max, Teams o Enterprise](https://claude.com/pricing)) **o** cuenta en [Anthropic Console](https://console.anthropic.com)
+- Cuenta Claude ([Pro, Max, Teams o Enterprise](https://claude.com/pricing)) **o** cuenta en [Claude Console](https://platform.claude.com)
 - Cuenta de GitHub (para demos de PRs y GitHub Actions)
 
 ### 🚀 Proyecto Base: CRM
 
 Durante todo el taller trabajaremos sobre un **CRM real** construido con Next.js, Prisma y Tailwind CSS. Clona el repositorio antes de empezar:
 
-`Clonar el
-                proyecto`
+`Clonar el proyecto`
 
 ```bash
-git clone https://github.com/hardcore-ai/basic_crm_30x.git
+git clone https://github.com/30x-llc/basic_crm_30x.git
 cd basic_crm_30x
 npm install
 ```
@@ -173,7 +172,7 @@ npm install
 > **Repositorio del Proyecto**
 >
 > Este CRM incluye gestión de clientes, interacciones y un dashboard. Todas las prácticas del taller (prompts, flujos, Hooks, Subagentes, Agent Teams, MCPs y Skills) se aplican sobre este proyecto.   
-> [🔗 github.com/hardcore-ai/basic_crm_30x](https://github.com/hardcore-ai/basic_crm_30x)
+> [🔗 github.com/30x-llc/basic_crm_30x](https://github.com/30x-llc/basic_crm_30x)
 
 ### Nivel Requerido
 

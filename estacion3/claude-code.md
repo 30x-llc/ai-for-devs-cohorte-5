@@ -30,25 +30,21 @@ Claude Code es una herramienta de código agéntica que **lee tu codebase, edita
 
 ### Instalación
 
-`macOS / Linux /
-                WSL`
+**macOS, Linux y WSL** (recomendado, se actualiza solo)
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-`Homebrew`
-
-```bash
-brew install --cask claude-code
-```
-
-`Windows
-                PowerShell`
+**Windows PowerShell**
 
 ```powershell
 irm https://claude.ai/install.ps1 | iex
-```
+``` **Homebrew** (no se actualiza solo: usa`brew upgrade claude-code`) ```bash
+brew install --cask claude-code
+``` **WinGet** (no se actualiza solo: usa`winget upgrade Anthropic.ClaudeCode`) ```powershell
+winget install Anthropic.ClaudeCode
+``` Comprueba la instalación con`claude --version` y, si algo falla, con `claude doctor`. No necesitas Node.js para la instalación nativa.
 
 ### Primera Sesión
 
@@ -61,11 +57,12 @@ claude
 
 ### Modelos Disponibles
 
-| Modelo | Caso de Uso | Costo |
-|---|---|---|
-| **Opus 4.7** | Razonamiento complejo, arquitectura | $$$ |
-| **Sonnet 4.6** | Tareas diarias, balance costo/capacidad | $$ |
-| **Haiku** | Tareas simples, búsquedas rápidas | $ |
+| Modelo | Alias en `/model` | Caso de Uso | Costo |
+|---|---|---|---|
+| **Fable 5.1** | `fable` o `best` | El más capaz: problemas difíciles y largos | $$$$ |
+| **Opus 5.5** | `opus` | Razonamiento complejo, arquitectura. Es el modelo por defecto en Pro, Max, Team y Enterprise | $$$ |
+| **Sonnet 5.5** | `sonnet` | Tareas diarias, balance costo/capacidad | $$ |
+| **Haiku 5.5** | `haiku`| Tareas simples, búsquedas rápidas | $ | `opusplan` usa Opus para planificar y Sonnet para ejecutar. Los alias apuntan siempre a la versión más reciente de cada familia.
 
 ### Primer Prompt: Explorar tu Proyecto
 
@@ -162,9 +159,7 @@ Las configuraciones se aplican de mayor a menor prioridad:
 
 ### Ejemplo: settings.json del Proyecto
 
-`.claude/settings.json`
-
-```json
+`.claude/settings.json` ```json
 {
   "permissions": {
     "deny": [
@@ -227,9 +222,7 @@ _Duración: 5 minutos_
 
 ### Template: CLAUDE.md Efectivo
 
-`CLAUDE.md`
-
-```markdown
+`CLAUDE.md` ```markdown
 # CRM Proyecto - Instrucciones para Claude
 
 ## Stack
@@ -260,9 +253,7 @@ _Duración: 5 minutos_
 
 ### Reglas Modulares
 
-`.claude/rules/testing.md`
-
-```markdown
+`.claude/rules/testing.md` ```markdown
 # Convenciones de Testing
 
 - Framework: Vitest + Supertest para tests de integración
@@ -280,9 +271,7 @@ Puedes decirle a Claude que recuerde algo específico:
 
 ```text
 recuerda que siempre usamos componentes de servidor (RSC) en Next.js por defecto
-```
-
-Usa `/memory` para revisar y editar lo que Claude ha guardado.
+``` Usa`/memory` para revisar y editar lo que Claude ha guardado.
 
 ### Generar CLAUDE.md Automáticamente
 
@@ -400,9 +389,7 @@ _Duración: 5 minutos_
 
 Un hook ejecuta lógica automática en puntos concretos del ciclo de Claude Code. La estructura oficial es: **evento → matcher → hooks[]**. En hooks de comando, Claude envía JSON por stdin con el contexto del evento, y tu script decide si permite, bloquea o solo registra.
 
-`Estructura mínima en settings.json`
-
-```json
+`Estructura mínima en settings.json` ```json
 {
   "hooks": {
     "PreToolUse": [
@@ -429,11 +416,7 @@ Un hook ejecuta lógica automática en puntos concretos del ciclo de Claude Code
     ]
   }
 }
-```
-
-`.claude/hooks/block-risky-commands.sh`
-
-```bash
+``` `.claude/hooks/block-risky-commands.sh` ```bash
 #!/usr/bin/env bash
 INPUT="$(cat)"
 CMD="$(echo "$INPUT" | jq -r '.tool_input.command // empty')"
@@ -471,9 +454,7 @@ exit 0
 
 ### Ejemplo Completo de Hooks
 
-`.claude/settings.json (sección hooks)`
-
-```json
+`.claude/settings.json (sección hooks)` ```json
 {
   "hooks": {
     "PostToolUse": [
@@ -549,9 +530,7 @@ _Duración: 3 minutos_
 
 ### Crear un Subagente Personalizado
 
-`.claude/agents/test-writer.md`
-
-```markdown
+`.claude/agents/test-writer.md` ```markdown
 ---
 name: "test-writer"
 description: Genera tests unitarios e integración para componentes React y rutas API
@@ -638,9 +617,7 @@ src/
    - Next.js: mockear `next/navigation`
 
 5. **Ejecutar y validar**:
-   - `npm run test` para ejecutar todos
-   - `npm run test:watch` durante desarrollo
-   - Verificar cobertura: `npm run test:coverage`
+   - `npm run test`para ejecutar todos -`npm run test:watch`durante desarrollo - Verificar cobertura:`npm run test:coverage`
 
 ## Ejemplo: Componente
 
@@ -697,9 +674,7 @@ describe("GET /api/customers/[id]", () => {
 
 ### Otro Ejemplo: Code Reviewer
 
-`.claude/agents/code-reviewer.md`
-
-```markdown
+`.claude/agents/code-reviewer.md` ```markdown
 ---
 name: "code-reviewer"
 description: Revisa código buscando bugs, seguridad, performance y code smells
@@ -772,8 +747,7 @@ _Duración: 2 minutos_
 
 Ejecuta Claude en modo no-interactivo para integrarlo en scripts y pipelines:
 
-`Scripts de
-                ejemplo`
+`Scripts de ejemplo`
 
 ```bash
 # Query simple
@@ -813,9 +787,7 @@ done
 
 ### GitHub Actions — Claude como Revisor de PRs
 
-`.github/workflows/claude-review.yml`
-
-```yaml
+`.github/workflows/claude-review.yml` ```yaml
 name: Claude Code Review
 on:
   pull_request:
@@ -839,9 +811,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           model: sonnet
-```
-
-Con esta configuración, puedes escribir `@claude revisa este código` en cualquier PR y Claude lo revisará automáticamente según las reglas del `CLAUDE.md` del repo.
+``` Con esta configuración, puedes escribir`@claude revisa este código` en cualquier PR y Claude lo revisará automáticamente según las reglas del `CLAUDE.md` del repo.
 
 ---
 
@@ -883,16 +853,11 @@ Agent Teams es ideal para tareas que se benefician del **trabajo paralelo y coor
 
 Agent Teams es una feature experimental. Actívala con la variable de entorno o en settings:
 
-`Variable de
-                entorno`
+`Variable de entorno`
 
 ```bash
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
-```
-
-`.claude/settings.json`
-
-```json
+``` `.claude/settings.json` ```json
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
@@ -921,11 +886,7 @@ Necesito agregar un módulo de reportes al CRM. Crea un agent team con: un teamm
 #### Modos de Visualización
 
 - **In-Process:** Todos los teammates corren dentro de tu terminal principal. Usa Shift+Down para navegar entre ellos. Funciona en cualquier terminal.
-- **Split Panes (tmux):** Cada teammate tiene su propio panel. Ves el output de todos simultáneamente. Requiere `tmux` o iTerm2.
-
-`.claude/settings.json`
-
-```json
+- **Split Panes (tmux):** Cada teammate tiene su propio panel. Ves el output de todos simultáneamente. Requiere `tmux`o iTerm2. `.claude/settings.json` ```json
 // Forzar modo in-process (sin tmux)
 { "teammateMode": "in-process" }
 
@@ -960,8 +921,7 @@ Crea un teammate arquitecto para refactorizar el módulo de autenticación. Requ
 
 #### Gestionar el Equipo
 
-`Comandos de
-                gestión`
+`Comandos de gestión`
 
 ```bash
 # Pedir a un teammate que se detenga
