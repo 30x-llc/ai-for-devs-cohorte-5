@@ -62,5 +62,6 @@ Para usar una skill, abre Claude Code en **tu** repo y pídele que lea y siga el
 
 | Estación | Material |
 |---|---|
-| E1 a E5 | Material de referencia en [hardcore-ai/c4](https://github.com/hardcore-ai/c4) |
+| E1, E2, E4 y E5 | Material de referencia en [hardcore-ai/c4](https://github.com/hardcore-ai/c4) |
+| E3 · Herramientas agénticas en práctica | [Estación 3](estacion3/README.md): conceptos, Claude Code, OpenCode y Antigravity |
 | E6 · Del spec al harness | [Estación 6](estacion6/README.md) |
